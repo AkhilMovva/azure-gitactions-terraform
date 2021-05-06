@@ -12,7 +12,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "cloud-practice-am"
     workspaces {
-      name = "adf_automation"
+      name = "azure-gitactions-terraform"
     }
   }
 }

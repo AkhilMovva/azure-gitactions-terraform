@@ -12,7 +12,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "cloud-practice-am"
     workspaces {
-      name = "azure-gitactions-terraform"
+      name = "azure-gitactions"
     }
   }
 }
@@ -48,7 +48,7 @@ resource "azurerm_storage_container" "adf_storage_target_01" {
 }
 
 resource "azurerm_data_factory" "adf_test" {
-  name                = "adf_practice_data_factory_akhil"
+  name                = "adfdatafactoryakhil123"
   resource_group_name = var.resource-group-dev
   location            = var.resource-location
 

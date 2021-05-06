@@ -36,24 +36,24 @@ jobs:
     #     framework: terraform
 
     - name: Setup Terraform
-     uses: hashicorp/setup-terraform@v1
-     with:
-       terraform_version: 0.13.3
-       cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 0.13.3
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
     #- name: Terraform Formats 
     #  id: fmt
     #  run: terraform fmt -check iac/tf
 
     - name: Terraform Init
-     id: init
-     run: terraform init iac/tf
+      id: init
+      run: terraform init iac/tf
 
     - name: Terraform Plan iac/tf
-     id: plan
-     if: github.event_name == 'push'
-     run: terraform plan -no-color iac/tf
-     continue-on-error: true
+      id: plan
+      if: github.event_name == 'push'
+      run: terraform plan -no-color iac/tf
+      continue-on-error: true
 
     
     - name: Terraform Plan Status

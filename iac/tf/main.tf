@@ -21,7 +21,6 @@ provider "azurerm" {
   features {}
 }
 
-
 resource "azurerm_storage_account" "adf_storage" {
   name                     = "adfstorageakhil123"
   resource_group_name      = var.resource-group-dev

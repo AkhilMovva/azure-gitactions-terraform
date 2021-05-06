@@ -23,7 +23,7 @@ provider "azurerm" {
 
 
 resource "azurerm_storage_account" "adf_storage" {
-  name                     = "adf_practice_storage_akhil"
+  name                     = "adfstorageakhil123"
   resource_group_name      = var.resource-group-dev
   location                 = var.resource-location
   account_tier             = "Standard"

@@ -1,6 +1,6 @@
 variable "resource-group-dev" {
   description = "azurerm resource groups"
-  default     = "adf_example_rg_dev"
+  default     = "azure-practice-rg"
 }
 
 variable "resource-location" {

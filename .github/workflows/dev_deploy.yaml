@@ -47,12 +47,12 @@ jobs:
 
     - name: Terraform Init
       id: init
-      run: terraform init iac/tf
+      run: terraform init network-security-groups
 
-    - name: Terraform Plan iac/tf
+    - name: Terraform Plan network-security-groups
       id: plan
       if: github.event_name == 'push'
-      run: terraform plan -no-color iac/tf
+      run: terraform plan -no-color network-security-groups
       continue-on-error: true
 
     
@@ -61,4 +61,4 @@ jobs:
       run: exit 1
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve iac/tf
+      run: terraform apply -auto-approve network-security-groups

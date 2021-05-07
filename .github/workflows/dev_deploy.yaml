@@ -60,7 +60,8 @@ jobs:
       if: steps.plan.outcome == 'failure'
       run: exit 1
 
+    - name: Terraform Apply
+      run: terraform apply -auto-approve iac/tf
+      
     - name: Terraform Destroy
       run: terraform destroy
-
-    

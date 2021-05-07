@@ -4,7 +4,7 @@ on:
     branches: 
       - adf_dev
     paths:
-      - iac/tf/**
+      - network-security-groups/**
   
 #env:
 ########## If storing tfstate to azure storage ##########

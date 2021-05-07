@@ -25,13 +25,15 @@ resource "azurerm_virtual_machine" "demo-instance-1" {
   os_profile {
     computer_name  = "demo-instance"
     admin_username = "demo"
+    admin_password = "demo1234!"
   }
   os_profile_linux_config {
-    disable_password_authentication = true
+    disable_password_authentication = false
+/*     disable_password_authentication = true
     ssh_keys {
       key_data = file("mykey.pub")
       path     = "/home/demo/.ssh/authorized_keys"
-    }
+    } */
   }
 }
 
@@ -102,13 +104,15 @@ resource "azurerm_virtual_machine" "demo-instance-2" {
   os_profile {
     computer_name  = "demo-instance"
     admin_username = "demo"
+    admin_password = "demo1234!"
   }
   os_profile_linux_config {
-    disable_password_authentication = true
+    disable_password_authentication = false
+/*     disable_password_authentication = true
     ssh_keys {
       key_data = file("mykey.pub")
       path     = "/home/demo/.ssh/authorized_keys"
-    }
+    } */
   }
 }
 

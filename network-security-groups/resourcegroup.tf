@@ -4,4 +4,5 @@ resource "azurerm_resource_group" "demo" {
   tags = {
       env = "network-security-group-demo"
   }
+  
 }
